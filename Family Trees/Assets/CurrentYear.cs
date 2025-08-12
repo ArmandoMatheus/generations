@@ -6,13 +6,13 @@ public class CurrentYear : MonoBehaviour
 {
     public int currentYear;
 
-    void Start()
+    public void YearAdd()
     {
-        
+        currentYear++;
     }
 
-    void Update()
+    public void YearRem()
     {
-        
+        currentYear--;
     }
 }
