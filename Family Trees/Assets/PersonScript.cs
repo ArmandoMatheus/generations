@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PersonScript : MonoBehaviour
 {
@@ -9,17 +10,30 @@ public class PersonScript : MonoBehaviour
     public int age;
     public int birthYear;
     public int deathYear;
-    public bool isAlive;
-    public CurrentYear current;
+    public bool isDead;
+    int yearCheck;
 
-    void Start()
+    public TMP_Text ageText;
+
+    private void Start()
     {
-        
+        yearCheck = CurrentYear.currentYear;
     }
 
-    public void CurrentAge()
+    void Update()
     {
-        age =  current.currentYear - birthYear;
+        if(yearCheck != CurrentYear.currentYear)
+        {
+            SetAge();
+        }
+    }
+
+    public void SetAge()
+    {
+        age =  CurrentYear.currentYear - birthYear;
+        ageText.text = age.ToString();
+        yearCheck = CurrentYear.currentYear;
+
     }
 
     public void DeathAge()
