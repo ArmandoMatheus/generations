@@ -14,15 +14,19 @@ public class PersonScript : MonoBehaviour
     int yearCheck;
 
     public TMP_Text ageText;
+    public TMP_Text firstNameText;
+    public TMP_Text lastNameText;
 
     private void Start()
     {
         yearCheck = CurrentYear.currentYear;
+        firstNameText.text = firstName.ToString();
+        lastNameText.text = lastName.ToString();
     }
 
     void Update()
     {
-        if(yearCheck != CurrentYear.currentYear)
+        if(yearCheck != CurrentYear.currentYear && isDead==false)
         {
             SetAge();
         }
@@ -30,14 +34,14 @@ public class PersonScript : MonoBehaviour
 
     public void SetAge()
     {
-        age =  CurrentYear.currentYear - birthYear;
-        ageText.text = age.ToString();
-        yearCheck = CurrentYear.currentYear;
-
+            age = CurrentYear.currentYear - birthYear;
+            ageText.text = age.ToString();
+            yearCheck = CurrentYear.currentYear;
     }
 
     public void DeathAge()
     {
+       
         age = deathYear - birthYear;
     }
 }
