@@ -6,7 +6,6 @@ public class CameraScript : MonoBehaviour
 {
 
     float panSpeed = 20f;
-    float panBorder = 10f;
     float panLimitX = 10f;
     float panLimitY = 6f;
     float scrollSpeed = 10f;
@@ -24,19 +23,19 @@ public class CameraScript : MonoBehaviour
     {
         Vector3 camPos = transform.position;
 
-        if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorder)
+        if (Input.GetKey("w"))
         {
             camPos.y += panSpeed * Time.deltaTime;
         }
-        if (Input.GetKey("s") || Input.mousePosition.y <= panBorder)
+        if (Input.GetKey("s"))
         {
             camPos.y -= panSpeed * Time.deltaTime;
         }
-        if (Input.GetKey("d") || Input.mousePosition.x >= Screen.width - panBorder)
+        if (Input.GetKey("d"))
         {
             camPos.x += panSpeed * Time.deltaTime;
         }
-        if (Input.GetKey("a") || Input.mousePosition.x <= panBorder)
+        if (Input.GetKey("a"))
         {
             camPos.x -= panSpeed * Time.deltaTime;
         }
