@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class PersonManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static string spawnName, spawnSurname;
+    public static int spawnBirthyear;
+
+
     void Start()
     {
         
