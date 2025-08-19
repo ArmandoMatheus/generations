@@ -13,15 +13,24 @@ public class PersonScript : MonoBehaviour
     public bool isDead;
     int yearCheck;
 
+    bool canEdit;
+
     public TMP_Text ageText;
     public TMP_Text firstNameText;
     public TMP_Text lastNameText;
+
+    public GameObject childSpawn;
+    public GameObject parentSpawn;
+
+
 
     private void Start()
     {
         yearCheck = CurrentYear.currentYear;
         firstNameText.text = firstName.ToString();
         lastNameText.text = lastName.ToString();
+        childSpawn.SetActive(false);
+        parentSpawn.SetActive(false);
     }
 
     void Update()
@@ -29,6 +38,15 @@ public class PersonScript : MonoBehaviour
         if(yearCheck != CurrentYear.currentYear && isDead==false)
         {
             SetAge();
+        }
+
+        if(EditScript.editor == true)
+        {
+            IsEditing();
+        }
+        if(EditScript.editor == false)
+        {
+            NotEditing();
         }
     }
 
@@ -44,4 +62,16 @@ public class PersonScript : MonoBehaviour
        
         age = deathYear - birthYear;
     }
+
+    public void IsEditing()
+    {
+        childSpawn.SetActive(true);
+        parentSpawn.SetActive(true);
+    }
+    public void NotEditing()
+    {
+        childSpawn.SetActive(false);
+        parentSpawn.SetActive(false);
+    }
+
 }

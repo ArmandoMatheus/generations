@@ -781,6 +781,8 @@ MonoBehaviour:
   ageText: {fileID: 1240081561}
   firstNameText: {fileID: 1207570980}
   lastNameText: {fileID: 1318692520}
+  childSpawn: {fileID: 0}
+  parentSpawn: {fileID: 0}
 --- !u!1 &400140521
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,6 +981,8 @@ MonoBehaviour:
   ageText: {fileID: 1459457603}
   firstNameText: {fileID: 1839273639}
   lastNameText: {fileID: 1968568591}
+  childSpawn: {fileID: 1528719888}
+  parentSpawn: {fileID: 1378956829}
 --- !u!212 &919952969
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1984,7 +1988,7 @@ GameObject:
   - component: {fileID: 1378956832}
   - component: {fileID: 1378956831}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: ParentButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2004,7 +2008,7 @@ RectTransform:
   m_Children:
   - {fileID: 928926762}
   m_Father: {fileID: 1905941041}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2241,7 +2245,7 @@ GameObject:
   - component: {fileID: 1528719891}
   - component: {fileID: 1528719890}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ChildButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2261,7 +2265,7 @@ RectTransform:
   m_Children:
   - {fileID: 141906515}
   m_Father: {fileID: 1905941041}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2685,8 +2689,8 @@ RectTransform:
   - {fileID: 1968568590}
   - {fileID: 1459457605}
   - {fileID: 518277727}
-  - {fileID: 1528719889}
   - {fileID: 1378956830}
+  - {fileID: 1528719889}
   m_Father: {fileID: 919952970}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
