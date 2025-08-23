@@ -5,6 +5,7 @@ using UnityEngine;
 public class EditScript : MonoBehaviour
 {
     public static bool editor;
+    public static bool changeMade;
     void Start()
     {
         editor = false;
@@ -19,6 +20,18 @@ public class EditScript : MonoBehaviour
         if (editor)
         {
             editor = false;
+        }
+    }
+
+    public static void Change()
+    {
+        if(changeMade == true)
+        {
+            changeMade = false;
+        }
+        else
+        {
+            changeMade = true;
         }
     }
 }
