@@ -6,6 +6,10 @@ public class EditScript : MonoBehaviour
 {
     public static bool editor;
     public static bool changeMade;
+
+    public GameObject person;
+
+
     void Start()
     {
         editor = false;
@@ -33,5 +37,10 @@ public class EditScript : MonoBehaviour
         {
             changeMade = true;
         }
+    }
+
+    public void AddPiece()
+    {
+        Instantiate(person, transform.position, transform.rotation);
     }
 }
