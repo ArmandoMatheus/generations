@@ -23,19 +23,19 @@ public class CameraScript : MonoBehaviour
     {
         Vector3 camPos = transform.position;
 
-        if (Input.GetKey("w"))
+        if (Input.GetKey("up"))
         {
             camPos.y += panSpeed * Time.deltaTime;
         }
-        if (Input.GetKey("s"))
+        if (Input.GetKey("down"))
         {
             camPos.y -= panSpeed * Time.deltaTime;
         }
-        if (Input.GetKey("d"))
+        if (Input.GetKey("right"))
         {
             camPos.x += panSpeed * Time.deltaTime;
         }
-        if (Input.GetKey("a"))
+        if (Input.GetKey("left"))
         {
             camPos.x -= panSpeed * Time.deltaTime;
         }

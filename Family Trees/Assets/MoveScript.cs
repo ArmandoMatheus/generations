@@ -18,16 +18,6 @@ public class MoveScript : MonoBehaviour
     {
         _dragOffset = transform.position - GetMousePos();
     }
-
-    void OnMouseUp()
-    {
-    }
-
-    void OnMouseOver()
-    {
-
-    }
-
     void OnMouseDrag()
     {
         transform.position = GetMousePos() + _dragOffset;
