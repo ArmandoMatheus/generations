@@ -1,18 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[RequireComponent(typeof(Rigidbody2D))]
 
 public class MoveScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    private Vector3 _dragOffset;
+    private Camera _cam;
+
+    void Awake()
     {
-        
+        _cam = Camera.main;
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnMouseDown()
     {
-        
+        _dragOffset = transform.position - GetMousePos();
+    }
+
+    void OnMouseUp()
+    {
+    }
+
+    void OnMouseOver()
+    {
+
+    }
+
+    void OnMouseDrag()
+    {
+        transform.position = GetMousePos() + _dragOffset;
+    }
+
+    Vector3 GetMousePos()
+    {
+        var mousePos = _cam.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = -3;
+        return mousePos;
     }
 }
