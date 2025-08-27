@@ -5,15 +5,13 @@ using UnityEngine;
 public class PersonManager : MonoBehaviour
 {
     public static string spawnName, spawnSurname;
-    public static int spawnBirthyear;
+    public static int spawnBirthYear, spawnDeathYear;
 
 
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         
