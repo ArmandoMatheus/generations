@@ -8,12 +8,27 @@ public class PersonManager : MonoBehaviour
     public static int spawnBirthYear, spawnDeathYear;
 
 
-    void Start()
+    public void Start()
     {
-        
+        spawnName = "Name";
+        spawnSurname = "Last Name";
+        spawnBirthYear = 1990;
+        spawnDeathYear = 2050;
     }
-    void Update()
+    public void SetNameInput(string input)
     {
-        
+        spawnName = input;
+    }
+    public void SetSurnameInput(string input)
+    {
+        spawnSurname = input;
+    }
+    public void SetBirthYearInput(string input)
+    {
+        spawnBirthYear = int.Parse(input);
+    }
+    public void SetDeathYearInput(string input)
+    {
+        spawnDeathYear = int.Parse(input);
     }
 }

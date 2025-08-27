@@ -22,8 +22,10 @@ public class PersonScript : MonoBehaviour
     private void Start()
     {
         yearCheck = CurrentYear.currentYear;
-        firstNameText.text = firstName.ToString();
-        lastNameText.text = lastName.ToString();
+        firstNameText.text = PersonManager.spawnName.ToString();
+        lastNameText.text = PersonManager.spawnSurname.ToString();
+        birthYear = PersonManager.spawnBirthYear;
+        deathYear = PersonManager.spawnDeathYear;
     }
 
     void Update()
